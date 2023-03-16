@@ -27,8 +27,8 @@ public class BrowserFactory {
 		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(1));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+		driver.manage().timeouts().implicitlyWait(Duration.ofMinutes(1));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofMinutes(1));
 		
 		return driver;
 	}
