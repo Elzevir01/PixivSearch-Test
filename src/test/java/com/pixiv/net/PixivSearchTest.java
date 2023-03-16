@@ -50,7 +50,6 @@ public class PixivSearchTest {
 
   @AfterTest
   public void afterTest() throws InterruptedException {
-	 Thread.sleep(Duration.ofSeconds(10));
 	 bf.removeDriver();
   }
 
