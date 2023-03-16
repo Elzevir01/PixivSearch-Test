@@ -3,13 +3,13 @@
 <suite thread-count="1" parallel="tests" name="Failed suite [TestSuite]" guice-stage="DEVELOPMENT">
   <test thread-count="1" parallel="tests" name="CHROME(failed)">
     <parameter name="browser" value="CHROME"/>
-    <parameter name="nodeUrl" value="http://localhost:4444/wd/hub"/>
+    <parameter name="nodeUrl" value="http://192.168.100.8:4444/wd/hub"/>
     <classes>
       <class name="com.pixiv.net.PixivSearchTest">
         <methods>
-          <include name="afterTest"/>
           <include name="f"/>
           <include name="beforeTest"/>
+          <include name="afterTest"/>
         </methods>
       </class> <!-- com.pixiv.net.PixivSearchTest -->
     </classes>

@@ -22,13 +22,13 @@ public class BrowserFactory {
 	////CONFIGURACION DE CHROME DRIVER////
 	public WebDriver setDriver(String browser, String nodeURL) throws MalformedURLException{
 		System.out.println(nodeURL);
-		ChromeOptions chrO = new ChromeOptions();
-		driver = new RemoteWebDriver(new URL(nodeURL), chrO);
+		ChromeOptions chromeOptions = new ChromeOptions();
+		driver = new RemoteWebDriver(new URL(nodeURL), chromeOptions);
 		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(1));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
 		
 		return driver;
 	}

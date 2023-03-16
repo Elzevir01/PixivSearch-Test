@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-14T14:13:54 ART" name="TestSuite" finished-at="2023-03-14T14:14:21 ART" duration-ms="26990">
+  <suite started-at="2023-03-16T11:24:38 ART" name="TestSuite" finished-at="2023-03-16T11:25:06 ART" duration-ms="28551">
     <groups>
     </groups>
-    <test started-at="2023-03-14T14:13:54 ART" name="CHROME" finished-at="2023-03-14T14:14:21 ART" duration-ms="26990">
+    <test started-at="2023-03-16T11:24:38 ART" name="CHROME" finished-at="2023-03-16T11:25:06 ART" duration-ms="28551">
       <class name="com.pixiv.net.PixivSearchTest">
-        <test-method is-config="true" signature="beforeTest(java.lang.String,java.lang.String)[pri:0, instance:com.pixiv.net.PixivSearchTest@31024624]" started-at="2023-03-14T14:13:54 ART" name="beforeTest" finished-at="2023-03-14T14:13:59 ART" duration-ms="4942" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String, java.lang.String)[pri:0, instance:com.pixiv.net.PixivSearchTest@2488b073]" started-at="2023-03-16T11:24:38 ART" name="beforeTest" finished-at="2023-03-16T11:24:41 ART" duration-ms="3191" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -16,18 +16,18 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[http://localhost:4444/wd/hub]]>
+                <![CDATA[http://192.168.100.8:4444/wd/hub]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="f()[pri:0, instance:com.pixiv.net.PixivSearchTest@31024624]" started-at="2023-03-14T14:13:59 ART" name="f" finished-at="2023-03-14T14:14:10 ART" duration-ms="11064" status="PASS">
+        <test-method signature="f()[pri:0, instance:com.pixiv.net.PixivSearchTest@2488b073]" started-at="2023-03-16T11:24:41 ART" name="f" finished-at="2023-03-16T11:25:06 ART" duration-ms="24740" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.pixiv.net.PixivSearchTest@31024624]" started-at="2023-03-14T14:14:10 ART" name="afterTest" finished-at="2023-03-14T14:14:21 ART" duration-ms="10930" status="PASS">
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.pixiv.net.PixivSearchTest@2488b073]" started-at="2023-03-16T11:25:06 ART" name="afterTest" finished-at="2023-03-16T11:25:06 ART" duration-ms="566" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
