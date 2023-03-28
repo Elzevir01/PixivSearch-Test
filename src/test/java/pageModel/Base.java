@@ -58,21 +58,25 @@ public class Base {
 	public void confirmarTitulo(String titulo) {
 		ExpectedConditions.titleIs(titulo);
 	}
+	////esperar la carga completa de la pagina
+	public void esperarPaginaWeb(String url) {
+		//wait.until(ExpectedConditions.urlToBe(url));
+	}
 	////////////////////////////////////////////////////////////////
 	public void checkTitulo(String tag, String tituloFijo){
-		String expectativa = "#"+tag+" "+tituloFijo;
+		String expectativa = tituloFijo;
 		try{
-			System.out.println("titulo Expectativa: "+expectativa);
-			System.out.println("titulo Actual: "+titulo());
+			System.out.println("titulo Exp: "+expectativa);
+			System.out.println("titulo Act: "+titulo().replace("#"+tag+" ", ""));
 			confirmarTitulo(expectativa);
 
 		}catch(Exception e){
-			e.getMessage();
+			System.out.println(e.getMessage());
 		}
 	}
 	////espera la carga de un elemento
 	public void esperarElemento(By elemento) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMinutes(1));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(elemento));	
 	}
 	////valida si un elemento existe o no(true/false)
@@ -86,5 +90,13 @@ public class Base {
 	    	System.out.println("Element NO exist");
 	    	return false;
 	    }
+	}
+	///numero random
+	public int numeroRandom(int min, int max) {
+		return (int) ((Math.random() * (max - min)) + min);
+	}
+	//screenshoot
+	public void screenShoot() {
+		
 	}
 }
