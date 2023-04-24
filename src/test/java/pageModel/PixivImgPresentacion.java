@@ -71,35 +71,10 @@ public class PixivImgPresentacion extends pageModel.Base {
 			e.printStackTrace();
 		}
 	}
-	public void imgNewTab() {
-		esperarElemento(presentacionImagen);
-		WebElement img = findElemento(presentacionImagen);
-		
-		//Store the ID of the original window
-		String originalWindow = driver.getWindowHandle();
-
-		//Check we don't have other windows open already
-		assert driver.getWindowHandles().size() == 1;
-
-		//Click the link which opens in a new window
-		
-		driver.findElement(By.linkText("new window")).click();
-
-		//Wait for the new window or tab
-		//wait.until(numberOfWindowsToBe(2));
-
-		//Loop through until we find a new window handle
-		for (String windowHandle : driver.getWindowHandles()) {
-		    if(!originalWindow.contentEquals(windowHandle)) {
-		        driver.switchTo().window(windowHandle);
-		        break;
-		    }
-		}
-
-	}
+	
 	public void contemplarImagen() {
 		try {
-			Thread.sleep(10000);
+			Thread.sleep(5000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

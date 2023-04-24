@@ -12,12 +12,18 @@ import pageModel.PixivResultados;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
-import org.testng.annotations.BeforeTest;
 
-import java.time.Duration;
+import io.qameta.allure.Description;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Link;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterTest;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+
 
 public class PixivSearchTest {
 	WebDriver driver;
@@ -27,29 +33,31 @@ public class PixivSearchTest {
 	PixivImgPresentacion pxp;
 	
 	BrowserFactory bf;
+	boolean flag= true;
 	//tag provicional
-	String tag = "gundam";
-	
-  @Test//(dataProvider = "dp")
-  public void f() {//Integer n, String s
-	 //Paso1 Navegacion a la portada pixiv.net
-	 pxm = new PixivMain(driver);
-	 pxm.navegar();
-	 pxm.checkTituloMain(tag);
-	 pxm.buscar(tag);
+	//String tag = "gundam";
+  
+	@Severity(SeverityLevel.NORMAL)
+	@Feature("Pixiv.net")
+	@Story(">ingreso a Pixiv.net")
+	@Link(name = "https://www.pixiv.net/", url = "https://www.pixiv.net/")
+	@Test(dataProvider = "dp")
+	@Description("Navega desde el portal de https://www.pixiv.net/ y contemplar una imagen despues de una rapida busqueda")
+  public void f(String tag) {//Integer n, String s
+	 //Paso1 check de titulo por primera vez en el sitio y busqueda de una tag
+		 if(flag=true) {
+			 pxm.checkTituloMain(tag); 
+		 }
+		 flag=false;
+		 pxm.buscar(tag);
 	 //paso2 resultado de la busqueda, checkea titulo y da click en la pestaña illustrations
-	 pxr = new PixivResultados(driver);
-	 pxr.checkTituloResultados(tag);
-	 pxr.ilustracionClick();
+		 pxr.checkTituloResultados(tag);
+		 pxr.ilustracionClick();
 	 //paso3 resultados filtrados por la pestaña illustration, checkea titulo y...
-	 pxi = new PixivIllustrations(driver);
-	 pxi.checkTituloIllustrations(tag);
-	 pxi.ilustracionClick();
-	 //paso4 descarga imagen
-	 pxp = new PixivImgPresentacion(driver);
-	 //pxp.descargarImagen2();
-	 //pxp.abrirImagen();
-	 pxp.contemplarImagen();
+		 pxi.checkTituloIllustrations(tag);
+		 pxi.ilustracionClick();
+	 //paso4 detenerse en la imagen
+		 pxp.contemplarImagen();
   }
 
   @DataProvider
@@ -57,9 +65,11 @@ public class PixivSearchTest {
     return new Object[][] {
       new Object[] {"gundam"},
       new Object[] {"glasses"},
+      new Object[] {"mecha"},
+      new Object[] {"Fate/GrandOrder"},
     };
   }
-  @BeforeTest
+  @BeforeClass
   @Parameters({"browser", "nodeUrl"})
   public void beforeTest(String browser, String nodeUrl) {//String browser, String nodeUrl
 	  try {
@@ -70,9 +80,15 @@ public class PixivSearchTest {
 		  exc.printStackTrace();
 		  System.out.println(exc.getMessage());
 	  }
+	  pxm = new PixivMain(driver);
+	  pxr = new PixivResultados(driver);
+	  pxi = new PixivIllustrations(driver);
+	  pxp = new PixivImgPresentacion(driver);
+	  pxm.navegar();
+	  
   }
 
-  @AfterTest
+  @AfterClass
   public void afterTest() throws InterruptedException {
 	 bf.removeDriver();
   }

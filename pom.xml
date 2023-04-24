@@ -53,5 +53,11 @@
 			<version>7.0.0</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- io.qameta.allure - allure-testng -->
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-testng</artifactId>
+			<version>2.21.0</version>
+		</dependency>
 	</dependencies>
 </project>

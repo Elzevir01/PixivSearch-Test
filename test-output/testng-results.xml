@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-28T12:33:10 ART" name="TestSuite" finished-at="2023-03-28T12:34:07 ART" duration-ms="56384">
+  <suite started-at="2023-04-24T12:19:21 ART" name="TestSuite" finished-at="2023-04-24T12:21:33 ART" duration-ms="132165">
     <groups>
     </groups>
-    <test started-at="2023-03-28T12:33:10 ART" name="CHROME" finished-at="2023-03-28T12:34:07 ART" duration-ms="56384">
+    <test started-at="2023-04-24T12:19:21 ART" name="CHROME" finished-at="2023-04-24T12:21:33 ART" duration-ms="132165">
       <class name="com.pixiv.net.PixivSearchTest">
-        <test-method is-config="true" signature="beforeTest(java.lang.String, java.lang.String)[pri:0, instance:com.pixiv.net.PixivSearchTest@1cd201a8]" started-at="2023-03-28T12:33:10 ART" name="beforeTest" finished-at="2023-03-28T12:33:14 ART" duration-ms="3412" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String, java.lang.String)[pri:0, instance:com.pixiv.net.PixivSearchTest@8deb645]" started-at="2023-04-24T12:19:21 ART" name="beforeTest" finished-at="2023-04-24T12:19:50 ART" duration-ms="29258" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,11 +23,112 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="f()[pri:0, instance:com.pixiv.net.PixivSearchTest@1cd201a8]" started-at="2023-03-28T12:33:14 ART" name="f" finished-at="2023-03-28T12:34:06 ART" duration-ms="52355" status="PASS">
+        <test-method signature="f(java.lang.String)[pri:0, instance:com.pixiv.net.PixivSearchTest@8deb645]" started-at="2023-04-24T12:19:50 ART" name="f" data-provider="dp" finished-at="2023-04-24T12:20:28 ART" duration-ms="37877" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[gundam]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.pixiv.net.PixivSearchTest@1cd201a8]" started-at="2023-03-28T12:34:06 ART" name="afterTest" finished-at="2023-03-28T12:34:07 ART" duration-ms="570" status="PASS">
+        <test-method signature="f(java.lang.String)[pri:0, instance:com.pixiv.net.PixivSearchTest@8deb645]" started-at="2023-04-24T12:20:28 ART" name="f" data-provider="dp" finished-at="2023-04-24T12:20:59 ART" duration-ms="31279" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[glasses]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method signature="f(java.lang.String)[pri:0, instance:com.pixiv.net.PixivSearchTest@8deb645]" started-at="2023-04-24T12:20:59 ART" name="f" data-provider="dp" finished-at="2023-04-24T12:21:09 ART" duration-ms="9463" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[mecha]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: element is not attached to the page document
+  (Session info: chrome=110.0.5481.177)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-147-generic', java.version: '19.0.2'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [141884b52de8edd8009f10ddeb53fc4b, clickElement {id=dc96f0d8-aff8-4551-83a7-db03c1001c71}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.177, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.x510oC}, goog:chromeOptions: {debuggerAddress: localhost:44473}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.18.0.3:4444/sessio..., se:cdpVersion: 110.0.5481.177, se:vnc: ws://172.18.0.3:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.18.0.3:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[RemoteWebDriver: chrome on LINUX (141884b52de8edd8009f10ddeb53fc4b)] -> css selector: div>ul>li>div]
+Session ID: 141884b52de8edd8009f10ddeb53fc4b]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=110.0.5481.177)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.8.1', revision: '8ebccac989'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-147-generic', java.version: '19.0.2'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [141884b52de8edd8009f10ddeb53fc4b, clickElement {id=dc96f0d8-aff8-4551-83a7-db03c1001c71}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.177, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /tmp/.com.google.Chrome.x510oC}, goog:chromeOptions: {debuggerAddress: localhost:44473}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.18.0.3:4444/sessio..., se:cdpVersion: 110.0.5481.177, se:vnc: ws://172.18.0.3:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.18.0.3:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[RemoteWebDriver: chrome on LINUX (141884b52de8edd8009f10ddeb53fc4b)] -> css selector: div>ul>li>div]
+Session ID: 141884b52de8edd8009f10ddeb53fc4b
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.TracedCommandExecutor.execute(TracedCommandExecutor.java:51)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+at pageModel.PixivIllustrations.ilustracionClick(PixivIllustrations.java:31)
+at com.pixiv.net.PixivSearchTest.f(PixivSearchTest.java:58)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:41)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:443)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:67)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1589)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method signature="f(java.lang.String)[pri:0, instance:com.pixiv.net.PixivSearchTest@8deb645]" started-at="2023-04-24T12:21:09 ART" name="f" data-provider="dp" finished-at="2023-04-24T12:21:32 ART" duration-ms="23496" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Fate/GrandOrder]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.pixiv.net.PixivSearchTest@8deb645]" started-at="2023-04-24T12:21:32 ART" name="afterTest" finished-at="2023-04-24T12:21:33 ART" duration-ms="553" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
