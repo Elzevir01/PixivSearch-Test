@@ -55,21 +55,6 @@ public class PixivImgPresentacion extends pageModel.Base {
 			System.out.println(e.getMessage());
 		}
 	}
-	public void abrirImagen() {
-		esperarElemento(presentacionImagen);
-		WebElement img = findElemento(presentacionImagen);
-		String imagenSRC = img.getAttribute("src");
-		//navegar(imagenSRC);
-		String selectLinkOpeninNewTab = Keys.chord(Keys.CONTROL,Keys.RETURN);
-		//driver.findElement(By.linkText("imagenSRC")).sendKeys(selectLinkOpeninNewTab);
-		img.sendKeys(selectLinkOpeninNewTab);
-		try {
-			Thread.sleep(Duration.ofMinutes(1));
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
 	
 	public void contemplarImagen() {
 		try {
