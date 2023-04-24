@@ -3,7 +3,6 @@ package pageModel;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.net.URL;
-import java.time.Duration;
 
 import javax.imageio.ImageIO;
 
